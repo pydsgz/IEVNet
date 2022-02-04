@@ -1,5 +1,15 @@
+
+
 # IEVNet
+
+**Powered by:**
+
+</br><img src="https://github.com/Project-MONAI/MONAI/blob/dev/docs/images/MONAI-logo-color.png" width="50%" height="50%"/>
+<img src="media/ievnet_viz_3d.gif" width="50%" height="50%"/>
+
 This is the official repository for our IEVnet publication (link: t.b.d.).  It includes MONAI code for IEVnet training and inference on cropped volumes around inner ears (for details regarding input data format, please refer to the publication). Please note that the dataset for training can unfortunately not be shared in full due to lack of consent. However, we provide two sample volumes for inference in the subfolder `sample_data`. We also provide the pre-trained IEVNet model weights which was used to create the validation in our publication. There are two ways to run inference with IEVnet - either in a docker container (recommended) or in a local installation of MONAI. For details, follow the following installation instructions. These instructions assume Linux (e.g. Ubuntu) as your operating system. If you are running a Windows system, it is recommended to [install WSL2](https://docs.microsoft.com/en-us/windows/wsl/install), the Windows Subsystem for Linux.
+
+
 
 # Installation
 Please clone this repository to your local hard drive into a local folder (e.g. /my/code/) via: 
