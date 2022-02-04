@@ -1,13 +1,15 @@
 ''' 
 This notebook assumes the following package versions:
 
-MONAI version: 0.3.0rc1
+MONAI version: 0.3.0rc4
 Python version: 3.6.10 |Anaconda, Inc.| (default, May  8 2020, 02:54:21)  [GCC 7.3.0]
+OS version: Linux (4.15.0-144-generic)
 Numpy version: 1.19.1
 Pytorch version: 1.7.0a0+8deb4fe
+MONAI flags: HAS_EXT = False, USE_COMPILED = False
 
 Optional dependencies:
-Pytorch Ignite version: 0.3.0
+Pytorch Ignite version: 0.4.2
 Nibabel version: 3.1.1
 scikit-image version: 0.15.0
 Pillow version: 7.2.0
@@ -15,6 +17,7 @@ Tensorboard version: 1.15.0+nv
 gdown version: 3.12.2
 TorchVision version: 0.8.0a0
 ITK version: 5.1.1
+tqdm version: 4.50.0
 
 For details about installing the optional dependencies, please visit:
     https://docs.monai.io/en/latest/installation.html#installing-the-recommended-dependencies
