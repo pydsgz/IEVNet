@@ -21,7 +21,7 @@ cd IEVNet
 ```
 
 ## Running IEVnet in a docker image (recommended)
-The best way to run IEVnet is via a docker container, to make sure that all necessary packages are installed in the correct version. Make sure that docker is installed on your system ([Ubuntu installation instructions](https://docs.docker.com/engine/install/ubuntu/), for other Linux distributions, please follow according instructions).
+The best way to run IEVnet is via a docker container, to make sure that all necessary packages are installed in the correct version. We are goind to use Project MONAI's official image for this, specifically version `projectmonai/monai:0.3.0rc4`. Make sure that docker is installed on your system ([Ubuntu installation instructions](https://docs.docker.com/engine/install/ubuntu/), for other Linux distributions, please follow according instructions).
 
 Assuming that you have navigated to the folder of the git repository (e.g. `/my/code/IEVNet` in the above example), you can start the docker container by running:
 ```
