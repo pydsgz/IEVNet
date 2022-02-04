@@ -70,10 +70,15 @@ class IEVnetInferer():
         #   - down/up-convolutions with stride 2 instead of max-pooling/up-pooling
         #   - number of residual units in each layer: 2 
         #   - Dice loss
-        if device=='cuda':
+        if device=='cpu':
+            map_location=torch.device('cpu')
+        elif 'cuda' in device:
             if not torch.cuda.is_available():
                 print('Cuda not available, falling back to CPU inference.')
                 device='cpu'
+                map_location=torch.device('cpu')
+            else:
+                map_location=torch.device(device)
         
         print('Loading IEVNet model...')
         self.model = monai.networks.nets.UNet(
@@ -84,7 +89,8 @@ class IEVnetInferer():
                         strides=(2, 2, 2, 2),
                         dropout=0.5,
                         num_res_units=2).to(device)
-        self.model.load_state_dict(torch.load('best_metric_model.pth'))
+        self.model.load_state_dict(torch.load('best_metric_model.pth', 
+                                               map_location=map_location))
         self.model.eval()
         
         self.transforms = Compose([LoadNifti(image_only=True),
