@@ -25,7 +25,7 @@ The best way to run IEVnet is via a docker container, to make sure that all nece
 
 Assuming that you have navigated to the folder of the git repository (e.g. `/my/code/IEVNet` in the above example), you can start the docker container by running:
 ```
-root@9b1a4a590da9:/ievnet/IEVNet# . start_docker.sh
+myuser@workstation:/my/code/IEVNet# . start_docker.sh
 ```
 This will map the git repository to the folder `/ievnet/` within the docker container, and expose port 9995 to be able to start jupyter notebooks. Please navigate to the folder `/ievnet` within the docker container. You can query the usage syntax for the inference script 
 ```
