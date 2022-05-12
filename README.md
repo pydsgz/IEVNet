@@ -7,9 +7,7 @@
 </br><img src="https://github.com/Project-MONAI/MONAI/blob/dev/docs/images/MONAI-logo-color.png" width="80%" height="80%"/>
 <img src="media/ievnet_viz_3d.gif" width="80%" height="80%"/>
 
-This is the official repository for our IEVnet publication (link: t.b.d.).  It includes MONAI code for IEVnet training and inference on cropped volumes around inner ears (for details regarding input data format, please refer to the publication). Please note that the dataset for training can unfortunately not be shared in full due to lack of consent. However, we provide two sample volumes for inference in the subfolder `sample_data`. We also provide the pre-trained IEVNet model weights which was used to create the validation in our publication. There are two ways to run inference with IEVnet - either in a docker container (recommended) or in a local installation of MONAI. For details, follow the following installation instructions. These instructions assume Linux (e.g. Ubuntu) as your operating system. If you are running a Windows system, it is recommended to [install WSL2](https://docs.microsoft.com/en-us/windows/wsl/install), the Windows Subsystem for Linux.
-
-
+This is the official repository for our IEVnet publication ([Open-access paper and PDF](https://doi.org/10.3389/fneur.2022.663200)). If you make use of the training/inference code or the pre-trained model weights in this repository, please cite our work appropriately [How-to-cite](#citation)).  It includes MONAI code for IEVnet training and inference on cropped volumes around inner ears (for details regarding input data format, please refer to the publication). Please note that unfortunately, the dataset for training can not be shared in full due to lack of patient consent. However, we provide two sample volumes for inference in the subfolder `./sample_data`. We also provide the pre-trained IEVNet model weights which was used to create the validation in our publication. There are two ways to run inference with IEVnet - either in a [docker container (recommended)](#running-ievnet-in-a-docker-image-recommended) or in a [local installation](#running-ievnet-locally) of MONAI. The instructions below instructions assume Linux (e.g. Ubuntu) as your operating system. If you are running a Windows system, it is recommended to install the [Windows Subsystem for Linux (WSL2)](https://docs.microsoft.com/en-us/windows/wsl/install).
 
 # Installation
 Please clone this repository to your local hard drive into a local folder (e.g. /my/code/) via: 
@@ -70,7 +68,7 @@ Afterwards, you can load the sample volumes and IEVnet inference results (segmen
 ![3D Slicer visualization of IEVnet inference result.](media/sample_inference_result.png)
 
 ## Running IEVnet locally
-An alternative is to install MONAI locally and run IEVnet on bare metal. Please follow MONAI installation instructions. It is recommended to install MONAI in a [python virtual environment](https://docs.python.org/3/tutorial/venv.html) or in a [conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). It is important to make sure that your local environment resembles as closely to the following package versions as possible (it is recommended to also install jupyter lab/notebook). It is essential to install MONAI in version 0.3.0rc4. Once the correct versions are installed, feel free to start a jupyter lab/notebook server, and run inference in the notebook `jnb_Monai_IEVnet_02mm_infer_newcases.ipynb`.
+An alternative is to install MONAI locally and run IEVnet on bare metal. Please follow MONAI installation instructions. It is recommended to install MONAI in a [python virtual environment](https://docs.python.org/3/tutorial/venv.html) or in a [conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Please make sure that your local environment resembles as closely to the following package versions as possible (ideally, also install jupyter lab/notebook). In particular, please install MONAI in version 0.3.0rc4. Once the correct versions are installed, feel free to start a jupyter lab/notebook server, and run inference in the notebook `jnb_Monai_IEVnet_02mm_infer_newcases.ipynb`.
 
 ```
 MONAI version: 0.3.0rc4
@@ -96,5 +94,20 @@ For details about installing the optional dependencies, please visit:
 ```
 
 # Citation
-Please cite this work as (t.b.d.)
+**Please cite this work as:**
 
+Ahmadi, S.-A., Frei, J., Vivar, G., Dieterich, M., & Kirsch, V. (2022). _IE-Vnet: Deep Learning-Based Segmentation of the Inner Ear’s Total Fluid Space._ In Frontiers in Neurology (Vol. 13). Frontiers Media SA. https://doi.org/10.3389/fneur.2022.663200
+
+**BibTex:**
+```
+@ARTICLE{10.3389/fneur.2022.663200,
+AUTHOR={Ahmadi, Seyed-Ahmad and Frei, Johann and Vivar, Gerome and Dieterich, Marianne and Kirsch, Valerie},   
+TITLE={IE-Vnet: Deep Learning-Based Segmentation of the Inner Ear's Total Fluid Space},      
+JOURNAL={Frontiers in Neurology},      
+VOLUME={13},      
+YEAR={2022},      
+URL={https://www.frontiersin.org/article/10.3389/fneur.2022.663200},       
+DOI={10.3389/fneur.2022.663200},      
+ISSN={1664-2295},   
+}
+```
